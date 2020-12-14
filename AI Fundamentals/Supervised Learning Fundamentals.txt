@@ -1,0 +1,23 @@
+1. Supervised Learning Fundamentals
+Great job on the previous chapter! Now that you know about the different flavors of machine learning, let's learn more supervised learning. Let's first talk about classification.
+
+2. Classification: Definition and intuition
+In human terms, classification is the process of putting things in boxes -- actual or imaginary. In technical terms we call these "boxes" "categories" or "classes" and we call such data "categorical variables". Such variables are all around us: colors, types of planets, flavors of ice cream... The category assigned usually determines the course of action for the given object so it's very important to get it right.
+
+3. Creating Classification Models
+So what does it mean to create a classification model? Let's build some intuition. To stick with our analogy -- it means creating those boxes for each category, deciding WHERE they will be built and in WHAT SHAPE AND SIZE, all based on the data provided in the training set. The image here shows two simplified cases of two categories represented with green and blue dots and the separation boundaries between them, which are essentially our classification models. We also call this line or surface "the decision boundary."
+
+4. Common Classification models
+So what are the most common algorithms we use for this purpose? Leaving Deep Learning aside, which we'll cover in Chapter 4, the most common classification algorithms today are Decision Trees, Logistic Regression, Support Vector Machines and Random Forest classifiers. Don't be confused – LogisticRegression is indeed a classification and not a regression model.
+
+5. Regression: Definition and intuition
+Regression models have a quite unintuitive name, but their essence is very simple: while classifiers help us predict CATEGORIES of things, regression models help us predict QUANTITIES. Like, what will be the temperatures in the next week? What are the chances of Denver Nuggets winning the NBA playoffs? How many customers will I gain and lose in the next 6 months? Similar to classification, the inputs to these models can be both numerical and categorical – but if the prediction output is a number, it's a regression model.
+
+6. Creating Regression models
+Now, if a classifier was trying to find the line SEPARATING data of different classes, a Regression model's objective is different: it aims to construct a line that goes ALONG the data points, as much as it's physically possible. That's why we sometimes also call it "line" or "curve fitting". The line on the picture shows a simple model for predicting a person's height based on its weight. The intercept and slope coefficients seen in red letters define this model in its entirety. Sometimes it's as simple as that.
+
+7. Common Regression Models
+When it comes to Regression models, the most common ones in use today are varieties of Linear Regression, meaning that these models assume a linear link between model inputs and its outputs. Of course, nothing is perfectly linear in real life, but many relationships can be quite decently approximated as having a linear nature within a certain range, as shown on the picture on the right. Remember: we're not looking for perfection, but for a model that is good enough! And again, do not be confused: Linear regression is an actual regression model, while logistic regression is a classification model.
+
+8. Classification and Regression
+You now understand the basic logic and the difference between regression and classification, and the problems they are solving. Let's do a quick knowledge check before diving into more details!

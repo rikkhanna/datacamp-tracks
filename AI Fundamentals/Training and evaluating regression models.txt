@@ -1,0 +1,20 @@
+1. Training and evaluating regression models
+Now that you know how to train and evaluate classification models, let's see how to train and evaluate regression models.
+
+2. Different but the same
+As we said in the first lesson of this chapter, the main difference between classification and regression models is the type of output variables they are built to predict: For classification it's categories and for regression - quantities, which we express with numbers. That fundamental difference further reflects the difference in model structure and metrics used to evaluate them, but many aspects are practically identical: We still need to perform the train/test splitting. We still use the same functions for model fitting and scoring. We still need to collect quality data for the model to work. So, in this lesson we will focus only on key differences.
+
+3. Going non-linear
+We mentioned earlier in this chapter that with regression, 99% of the time we use linear models, even when we model non-linear relationships. So how do we do that? The trick is simple: we engineer polynomial features in our dataset and feed it as such to any linear model that we wish. Polynomial features are features constructed by multiplying raw features with themselves a number of times or multiplying features between themselves or both. When we multiply two features, we are creating so called "interaction features". The scikit-learn algorithm that does this job for us is, very conveniently, called PolynomialFeatures and we only need to provide it with our desired degree of polynomial it needs to generate. Here, we chose 2. Calling the preprocessors method .fit_transform() creates the desired higher-order features, which we then feed into our linear learning algorithm as we do with any other data.
+
+4. Regression error
+Unlike classification, where the prediction is either correct or incorrect, regression predictions are NUMBERS, so regression errors are ALSO numbers and can be positive, negative, big or small. In other words, regression prediction is almost certainly always wrong, but the question is: how wrong is it in general?
+
+5. Regression metrics: "Raw" vs. Absolute
+The choice of metrics always depends on our specific objective, but most of the time we want some kind of absolute error metric. Otherwise positive and negative errors can cancel each other out and give us a false sense of confidence in our model. Or, if we just want a relative measure that quantifies the goodness-of-fit of our regression model, the R-squared score is the way to go.
+
+6. Regression metrics: Mean vs. Median
+When errors are normally distributed, a good choice is the mean absolute error. If we however expect occasional error spikes of higher magnitude, it would be good to "filter them out" by calculating the MEDIAN absolute error.
+
+7. Regression metrics: Code examples
+And of course, we have ready-made functions for that purpose already implemented in scikit-learn. Notice the consistency in the code: whether it's classification or regression, scikit-learn scoring functions take the actual reference outputs as the first argument and the predictions as the second one.

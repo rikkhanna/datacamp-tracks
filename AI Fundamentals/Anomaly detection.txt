@@ -1,0 +1,29 @@
+1. Anomaly detection
+Next stop on our journey through Unsupervised Learning is the realm of Anomalies.
+
+2. Definition and use cases
+Many times we want to detect and react upon unusual behavior in our systems and processes. We call these events anomalies or outliers. Unfortunately, anomalies are sometimes so rare and so different from each other, that applying supervised learning is practically impossible. Luckily, in many cases we can still define what is the normal mode of operation and then flag every event that significantly deviates from it as an anomaly. Most common use cases for anomaly detection are credit card fraud detection, network security monitoring, heart-rate monitoring and others.
+
+3. Approaches: Thresholding
+What approach we will take to detect the anomalies depends in the first place on the nature of our process. If we are dealing with a quantity that is fairly stable over time, sometimes a simple threshold is enough.
+
+4. Approaches: Rate of change
+However, sometimes the anomaly is not in the magnitude of the value, but in the rate at which it changes, like suddenly peaking or dropping. In that case we need to include the derivatives of the target value in our modeling.
+
+5. Approaches: Shape monitoring
+In very difficult cases, even the rate of change is not a sufficient anomaly detection, but we must find a way to model normal behavior in terms of the expected succession of values over time -- or the shape of the waveform.
+
+6. Algorithms
+As far as the standard algorithms that we use for anomaly detection, some common ones are Robust covariance, Isolation Forests and One-Class Support Vector machines. They all have their pros and cons: - Robust covariance is simple and fast, but works only for normally distributed data. - One-class SVM doesn't require normality, but is very sensitive to outliers. - IsolationForests the most powerful among the three, but 3-10 times slower. Still if your computational power allows it, Isolation Forests are indeed the standard go-to algorithm for this purpose today.
+
+7. Results
+Here we can see the differences in outputs. As stated, they all have a different underlying structure and assumptions, but the trade-off is, as usual, between simplicity and speed on one side and performance on the other.
+
+8. Training and testing
+As with all other models in the scikit-learn package, the model is trained using the fit() method and applied using the predict() method. Here we show an example for Isolation Forests, but the same holds for other mentioned algorithms also. So how do we evaluate the quality of an Anomaly Detection algorithm?
+
+9. Evaluation
+As we have seen with clustering, a model constructed using unsupervised learning can still be evaluated using SUPERVISED methods and metrics -- and that is exactly the case with anomaly detection. Ultimately, we are interested in how good it is at detecting anomalies, as opposed to the number of false alarms it raises -- so we have to have SOME amount of labelled anomalies, at least for the evaluation phase. The perfect tool for this task is the so-called confusion matrix, from which we can then derive Precision and Recall scores. Let's imagine we've built an Anomaly Detection model for heart rate monitoring. Precision tells us the percentage of times that our algorithm is correct when it signals that arrhythmia is detected. Recall, on the other side, tells us what percentage of arrhythmias we have successfully detected? These are extremely important metrics in Machine Learning in general, so it's critical to clearly understand the difference between them.
+
+10. Want to learn more?
+With this we've only covered the very basics, so if you want to learn more, DataCamp also offers specialized courses in Anomaly and Fraud detection, both in Python and R. Now let's check your current knowledge!

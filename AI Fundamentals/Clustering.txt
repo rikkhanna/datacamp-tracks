@@ -1,0 +1,29 @@
+1. Clustering
+In this lesson we will talk about Clustering.
+
+2. What is clustering?
+A cluster is a group of entities or events sharing similar attributes. So, when we talk about clustering within the context of AI, we talk about the process of applying Machine Learning algorithms for automated discovery of clusters. This is an unsupervised learning problem, because we are not using any pre-existing categorizations during training -- we let the algorithm assign data into groups entirely on its own.
+
+3. Popular clustering algorithms
+There are DOZENS of clustering algorithms. The simplest and by far the most commonly used method is KMeans clustering. Then there is Spectral clustering, DBSCAN and many more.
+
+4. Results of different algorithms (MiniBatchKMeans)
+There are clear differences in the classification results of each of these algorithms. KMeans, seen in the left column, supports only linear separation boundaries AND you have to specify the number of clusters to be found, but it's very fast.
+
+5. Results of different algorithms (SpectralClustering)
+Spectral Clustering (in the middle column) also requires the number of clusters to be specified by the user, BUT it allows for very non-linear separation between clusters -- at the expense of slower execution time.
+
+6. Results of different algorithms (DBSCAN)
+Finally, DBSCAN allows both nonlinear separation AND figures out the number of clusters on its own, BUT it can leave too many points without any specific cluster, as indicated with black dots. Obviously, each algorithm has its advantages and the final choice should be made based on the requirements of each specific use case. We will not go into depth on how each algorithm works, but let's see what are some common challenges in their application. The most common being: how many clusters do I actually have?
+
+7. How many clusters do I have?
+Yes, many clustering algorithms, including KMeans still require YOU to specify the number of clusters you are looking for. On the top left, we specify only one cluster, on the top right 3 and on the bottom right 6. But you often have no idea how many clusters you should have and it can easily appear to be a chicken and egg problem. Luckily there are solutions, one of them being the elbow method. The idea behind it is that we scan through a range of possible number of clusters and measure the so-called "sum of squared distances", which indicates how far each point is from the center of the cluster it is assigned to.
+
+8. How many clusters do I have?
+When we plot the evolution of the sum of squared distances against the number of clusters, we clearly see the so-called "elbow", which is the value after which our curve flattens out. In our case, the "elbow method" tells us that we have 3 clusters, which makes perfect sense based on the plots we have produced earlier.
+
+9. Cluster analysis and tuning
+Of course, there are many other methods and metrics based on which you can tune your clustering algorithm. The most common one is the Variance Ratio Criterion, which considers the distance of each point to the center of its cluster together with the distances between cluster centers themselves. And the most common alternative to it is the Silhouette Score, which evaluates how close each point is to its own cluster VS how close it is to the others? These two belong to the "unsupervised clustering metrics", because we have not defined any expectations on how our samples should be clustered. When we DO have expectations defined in a validation set, we can use Supervised metrics, such as Mutual Information and Homogeneity, which essentially compare the match between the expectations and the clustering results. But don't be confused: here we are still using unsupervised learning, we are just EVALUATING the results in a supervised manner.
+
+10. Explore, experiment and tune!
+To reiterate: there is no such thing as the best clusterization algorithm. The best is the one which is most suited for your specific application and data. Also, have in mind that clustering is very sensitive to how you preprocess your data, so make sure to apply feature standardization and other best practices.

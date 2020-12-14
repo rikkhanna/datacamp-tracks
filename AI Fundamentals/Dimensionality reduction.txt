@@ -1,0 +1,21 @@
+Got It!
+1. Dimensionality reduction
+Great job with supervised learning! We're going to start this chapter with dimensionality reduction, because it represents a common step in preparing our data for other Supervised or Unsupervised Learning algorithms.
+
+2. Definition
+Dimensionality reduction is the process of reducing the number of variables under consideration by obtaining a set of principal variables. We usually apply it as a pre-processing step, when there is a strong need to represent existing data using a smaller number of variables, while keeping as much information as possible. So what could these needs be?
+
+3. Why?
+Well, sometimes we are afraid of overfitting, that is that our model will memorize trivial details instead of most crucial patterns in the data. Having too many features increases the risk of that happening and dimensionality reduction can be a good antidote. Sometimes there is too much correlation between our features, which creates problems with linear regression. Sometimes the dimensionality of our raw dataset puts enormous stress on our limited computational resources. And sometimes we just need a way to visualize hyper-dimensional data on a two-dimensional plot, ready for printing. On the other side, the benefits of this procedure usually come at the cost of losing a certain amount of information, which can then have a negative impact on our performance. You should therefore always estimate the performance of your model before AND after applying dimensionality reduction in order to determine if that's the sacrifice you are really willing to make.
+
+4. Types
+Dimensionality reduction can be divided into feature SELECTION and feature EXTRACTION. Feature SELECTION is the simplest form of reduction and it consists of selecting the subset of most predictive features, without applying any transformations. As simple as it sounds, it is not a trivial problem, because we need to select the features that carry the most information when COMBINED. It's like making a basketball team: Five best players in the NBA rarely make a winning team when put together. On the other side, we have feature EXTRACTION, which ALWAYS involves some kind of transformation and often combining multiple features into one by applying mathematical operations called linear and non-linear projections. In this course we will mainly talk about most common feature extraction methods.
+
+5. Common algorithms
+When it comes to algorithms involving linear projections, the by far most common one is the Principal Component Analysis or just P.C.A. Another very useful one, especially in the domain of Text Mining is Latent Dirichlet Allocation, or LDA. From the domain Non-linear algorithms, we very often use the Isomap algorithm and t-SNE. Keep in mind that the power of non-linear algorithms comes at a cost of longer execution times and sometimes inconsistency of results.
+
+6. Principal Component Analysis (PCA)
+You could bet that PCA is the first algorithm that pops into the mind of a data scientist when someone mentions dimensionality reduction. It is a linear method, and as such very simple, fast and consistent. You can think of it as an algorithm that tries to find the directions across which your data varies the most and set these directions as the new coordinate system. The reduction happens when we decide to keep only "n" most informative components and discard the rest. However, it relies on the assumption that our data is normally distributed, which is often very idealistic and makes the algorithm very sensitive to outliers. Nonetheless, it should be the first tool in your toolbox and you should proceed to more complex methods only if data shows that PCA doesn't cut it.
+
+7. Use it wisely!
+So, to reiterate, Dimensionality Reduction is most often a preprocessing step before other Machine Learning models. Use it only if there is a strong need and start from linear methods first.

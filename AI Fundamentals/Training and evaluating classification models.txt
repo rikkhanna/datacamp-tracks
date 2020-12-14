@@ -1,0 +1,39 @@
+Got It!
+1. Training and evaluating classification models
+Now that you know the difference between regression and classification, let's study the training and evaluation of classifiers in more details.
+
+2. Train/test splitting
+One of the most important steps in our process is to make sure that we never, EVER evaluate our model on the same examples we used to train it. The simplest way to ensure this is to apply the so-called train/test split, aka the "hold-out method", where we usually take around 60% of all available labelled data for training our model and use the remainder for testing, which can be done in one line of code using the train_test_split function from scikit-learn.
+
+3. Model training
+Assuming we have already decided which model to use, we proceed to configure the model. In the first iteration it is fine to use the hyperparameters default values, but to achieve the best performance we need to turn the knobs a bit and find the optimal settings for our specific dataset. Lastly, we start the training procedure by calling the .fit() method and passing the inputs and labeled outputs to it.
+
+4. Model testing
+Once the training is done, we want to take our model for a ride. We do this by calling the .predict() method of our model and passing a test example. So, if we have previously trained a model for classifying news articles into categories based on their title, we will pass a title of interest as the argument "X" to the model and voila! There's our category.
+
+5. Inspecting model outputs
+Inspecting our model predictions case-by-case is fine as a sanity check, but we need some hard numbers to determine our algorithm's overall performance. This is where the test set – those 40 percent of labeled data we didn't use for training – comes into play. We now use it to generate predictions for every test example and then compare those with test set labels. One common method to inspect classification performance is to construct the so called "confusion matrix"
+
+6. Inspecting model outputs
+which can indeed appear confusing at first sight, but let's inspect it square by square.
+
+7. Confusion matrix: True positives
+Let’s say we built a model to predict if a patient suffers from diabetes based on different information (age, diet, amount of exercise). At the individual level, predictions can be either: "TRUE positives", when our model produces a POSITIVE and CORRECT prediction - or in our example: it predicts diabetes and the patient is actually suffering from it.
+
+8. Confusion matrix: True negatives
+"TRUE negatives" are it's mirror image and occur when our model produces a NEGATIVE and CORRECT prediction, that is it predicts that the patient is healthy and he actually is.
+
+9. Confusion matrix: False positives
+Next we have "FALSE positives", which are errors when the prediction is POSITIVE but the reality is different. That is: the model predicts diabetes but the patient is actually healthy (this is also called the Type 1 error and you can think of it as a false alarm).
+
+10. Confusion matrix: False negatives
+Finally, "FALSE negatives" are cases when our prediction is NEGATIVE, but the true condition is POSITIVE - that would happen if our model predicted no diabetes while the patient was actually suffering from it (this is also called the Type 2 error or "missed discovery").
+
+11. Accuracy, precision, recall
+If we then aggregate these individual predictions we get overall classification metrics, the most fundamental ones being Accuracy, Precision and Recall. Accuracy is the simplest one and it just tells us the percentage of times when our model's prediction has matched the ground truth. For the diabetes example it would mean: "How often did we make the correct diagnosis?" Then we have "Precision", which indicates the percentage of actual diabetes cases that our model successfully detected, which is inversely proportional to the Type 1 error. And finally Recall, which indicates how often was our model correct when it detected no diabetes, which is inversely proportional to the Type 2 error.
+
+12. Code example using Python + Scikit-learn
+And of course, scikit-learn offers ready made functions for calculating these metrics. In this example, the result tells us that our model correctly predicted the actual value 88% of the time!
+
+13. Knowledge check!
+Now it's your turn to test some performance metrics!

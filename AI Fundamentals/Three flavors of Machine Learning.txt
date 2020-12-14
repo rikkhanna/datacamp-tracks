@@ -1,0 +1,33 @@
+Got It!
+1. Three flavors of Machine Learning
+To better understand Machine Learning, let's investigate its three most common flavors: Supervised, Unsupervised, and Reinforcement learning.
+
+2. Supervised Learning
+Supervised learning is the most common flavor of machine learning in use today. Companies use it to predict employee performance, what product you're likely to buy next, are you likely to repay the loan you are applying for and much more. We use it to build models that predict categories or quantities based on some input measurements. So, if we are making a Fruit and Vegetable recognizer, the training inputs will be pictures and training outputs the labels stating which fruit or veggie is in the picture. The usage of output labels during training is where the name "supervised" comes from.
+
+3. Regression vs. Classification
+There are two major problem types in supervised learning: Regression problems, when the output of interest is a quantity -- such as length, weight or oil prices; and Classification problems, where we want to predict categories, such as "metal or plastic", "positive or negative review".
+
+4. Supervised algorithms
+Most common models for tackling regression problems are Linear regression, Lasso and Ridge regression, as well as ARIMA models which are used for time-series forecasting. For classification, most common models are Logistic regression, Bayesian classifiers and Tree-based models (such as Decision Trees, Random Forests and Gradient Boosted Trees). As for neural networks, they are so versatile that, in the right configuration, they can be used to tackle both problems.
+
+5. Unsupervised Learning
+Unsupervised learning owes its name to the fact that at training time it makes no use of the output labels -- it is only busy with capturing the relationships and patterns in process inputs.
+
+6. Unsupervised learning: Clustering
+One typical problem we can solve in this way is finding groups of similar entities or events -- for example, groups of similar consumers of a certain product, or similar articles on a news website. We call this problem "clustering" and it is crucial to differentiate it from its supervised sibling Classification. With classification, we are teaching the model some **pre-existing** categorizations, while with clustering we are exploring and **discovering** categories, with minimum assumptions.
+
+7. Unsupervised learning: Anomaly detection
+Another important problem solved by unsupervised learning is Anomaly detection -- used to detect abnormal entities and events, like the ones in the ECG signal shown on the picture.
+
+8. Unsupervised learning: Dimensionality reduction
+And lastly, there is Dimensionality Reduction -- used to reduce complex, high-dimensional datasets to a simplified representation. We might do this to minimize overfitting, or to reduce the computational intensity or just to be able to visualize complex data in 2D.
+
+9. Unsupervised algorithms
+When it comes to algorithms, the most famous Clustering algorithm is K-means clustering, but a variety of them exists, like mean-shift clustering, DBSCAN and others. For Dimensionality reduction, the first choice is usually Principal Component Analysis or PCA, followed by an array of non-linear algorithms, also called "Manifold learning". Finally, for Anomaly detection, an excellent first choice is the Isolation Forest algorithm.
+
+10. Reinforcement learning
+Last but not least, we have the very interesting domain of Reinforcement Learning, which is not covered in this course, but absolutely necessary to mention. Reinforcement learning is most similar to the natural way in which living organisms learn: an entity or an "agent" is taking certain actions in its environment and then adjusting its behavior depending on whether the outcome of the action was positive or negative compared to its success criteria. Although a very powerful idea and easy to intuitively understand, this domain of AI is still in its infancy, but significant efforts are being invested in research within this domain.
+
+11. Recap time!
+Ok, you got it! We made a quick flyover across the vast AI landscape -- let's practice the learnings from this chapter and then we'll take deeper dives into Supervised, Unsupervised and Deep Learning.

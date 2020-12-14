@@ -1,0 +1,29 @@
+1. All models are wrong but some are useful
+In this chapter, we will explain what AI models are and how to build them.
+
+2. What is a model?
+A predictive model is a simplified representation of the actual process we are dealing with. It is neither feasible nor necessary to ever create a perfect model -- we need one that is good enough for our application. A toy car can be a great car model for child's play, but for building self-driving vehicles, we will need something more.
+
+3. How do we build one?
+How do we actually build a model? We start by defining the specific problem we need to solve and the associated measure of success. Then we collect the data from our process inputs and outputs. Based on that, we select the model to address the problem at hand and fit it using the available data. And finally, we use our amazing model to tackle the monster-problem that motivated us to build it in the first place!
+
+4. Define the problem
+But let's not rush. The top predictors of failure of AI projects are the lack of a clear problem definition, no value proposition, and no success metric. To minimize the chance of failure, make sure to clearly answer these questions upfront. First, what is the pain point? For example, we want to automate manual, repetitive tasks with an AI solution. Second, how do we create value by solving this problem? In our automation example, we would create value by freeing up resources for more complex and productive work. Finally, how do we define and measure success and failure? In our automation example, we would define success by how many hours of work we save.
+
+5. Configure the model
+Now that our BUSINESS problem is clearly defined, we can start working on the technical aspect of our AI solution. We do so by answering the following questions. First, what is the technical nature of my problem in the broadest sense? Second, what is the appropriate theoretical model for my problem? Finally, what specific algorithm would have the best performance on my dataset? These are big decisions which we will address in more detail in the coming lessons and exercises -- but once these questions are answered, we can proceed to model fitting.
+
+6. Fit the model
+In scary mathematical jargon, model fitting refers to performing numerical optimization, looking for the minimum of our cost function in the parameter space. Scary, huh? In HUMAN terms, fitting is the process of moving the knobs under the hood of our model, testing as many combinations as necessary, until we find those values that yield the best performing model. Like us humans when we're searching for that perfect water temperature in the shower, the fitting algorithm runs up and down, until it finds the settings that are just right.
+
+7. Parameters and hyperparameters
+Model parameters (or coefficients) are those values that the algorithm learns from the data by itself, but there is another set of values crucial to the performance of our model: the "hyper-parameters". Hyper-parameters are settings defined before the training. For example, when performing clustering, before your model even sees the data, we first need to tell him the number of clusters he will be looking for. Searching for the optimal hyper-parameters is sometimes referred to as "model tuning".
+
+8. Reality check
+And before we start using our model, we need to check if its predictions are actually hitting the target, but also whether it actually understands the patterns in the data or if it's just memorizing them -- which is a problem called **over fitting**.
+
+9. Performance evaluation
+We mainly want to see how the model performs on examples it didn't see during the training phase. The simplest way to do this is to apply the holdout approach, where we usually use around 60 percent of all available labeled data for training and the remaining 40% for testing. Comparing the model predictions on the test inputs with the known test outputs gives us a picture of our model's performance.
+
+10. Let's dive in!
+Now that you have learned what models are and how they are built, let's get our hands on the keyboard and start making some!

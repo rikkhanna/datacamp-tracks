@@ -1,0 +1,23 @@
+1. Deep Learning & Beyond
+Welcome to the last chapter of this course! Now that you know the basics of Supervised and Unsupervised Learning, let's give some special time to the family of algorithms that draw the most attention in both academia and industry today: Artificial Neural Networks.
+
+2. Brief history of Neural Networks
+Artificial networks are actually quite an old algorithm, invented way back in 1958, by psychologist Frank Rosenblatt. He called his network Perceptron and it was intended to model the human perception processes. But for a long time, Neural Nets were more of a concept than a practical tool. All up until the computing boom of the 80's and the famous backpropagation paper written by Rumelhart, Williams and Hinton in 1986, which defined how Neural Nets are trained even today. From then on, Neural Nets were making small but firm steps forward, enabled by the steady rise of available computing power, until the historical milestone in 2012, when a convolutional neural network (CNN) called AlexNet achieved the best result on the ImageNet 2012 Challenge, which brought Deep Learning into the spotlight where it remains to this day.
+
+3. The building blocks
+To understand neural nets as a whole, we need to first understand its building blocks. Human neurons usually have a bunch of short "branches" called dendrites, which bring the signals to the neuron, where they get aggregated and led off by the long branch called the axon. An "artificial neuron" is the exact same thing, expressed in mathematical terms: We have input branches with their weight factors, which define the impact of each input. Then we have a transfer function which aggregates all the weighted inputs and is usually just a regular sum. And finally there is the so-called "activation function", which is usually some non-linear function that converts the sum of weighted inputs into the neuron's final value at the output.
+
+4. The basic network structure
+When we then take a multitude of artificial neurons and interconnect them in an organized way -- we get an artificial neural network. Each network must have an input and an output layer and they usually have at least one hidden layer next to that.
+
+5. The basic network structure - input layer
+The input layer is the entry point for our data. If we were building an image classifier, each input would be connected to one image pixel.
+
+6. The basic network structure - hidden layer
+As the image signal travels across the network, it is getting transformed by the network weights and functions,
+
+7. The basic network structure - output layer
+only to be fully transformed to a single value at the network output. For example, 0 for a "cat" and "1" for a "dog" detected in the picture. The number of possible network topologies is infinite, but there are some standard formations which have proven themselves over time, like recurrent and convolutional networks, which we'll talk about more in the next lessons.
+
+8. How do we make them?
+Let's make a simple network. The industry standard library for Deep Learning today is Tensorflow by Google and since version 2.0 it integrates the "keras" library, which makes network development a breeze. We will initialize a SEQUENTIAL model, which is a linear stack of layers and indeed the most common Neural Network design pattern. We then add one fully connected or DENSE INNER layer with 32 units and another dense OUTPUT layer with 3 units, because we are dealing with a 3-class classification problem. Notice that for the 1st layer we had to specify the input dimension, but not for the second one, because its inputs are all outputs of the previous layer. Finally, we have to define the parameters guiding the fitting procedure: The optimizer, the loss function and the performance metric used. As you can see, there are many decisions to make. Optimal network design and optimization approaches are beyond the scope of this course, but covered in detail in DataCamp's series on Deep Learning and Machine Learning in general.

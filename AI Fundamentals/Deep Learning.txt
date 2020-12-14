@@ -1,0 +1,20 @@
+1. Deep Learning
+Now let's talk about the buzziest of all the buzz words in AI: Deep Learning.
+
+2. Deep Neural Networks: what are they?
+So what are Deep Neural Networks? As you have seen, we build networks by stacking layers of neurons on top of each other. At a minimum, we have one layer for the input, one for the output and one hidden layer in the middle. Whatever the number of nodes in each layer, we call these "shallow networks". But the moment we pass the threshold of 3 layers (including the input and the output), we are already building a Deep Learning network.
+
+3. Types of DNNs: Feedforward
+The most basic neural network architecture is the so called "Feedforward network", an example of which we have seen on the previous slide. The key property of this network is that the signal travels strictly unidirectionally, from the input to the output. Feedforward networks can be very powerful, but they are not suited well for data in which the "order of appearance" is important, like text, sound or time-series in general. For that purpose we would rather use the so-called "Recurrent neural networks".
+
+4. Types of DNNs: Recurrent
+These networks take as their input not just the current input example they see, but also what they have perceived previously in time. RNNs have completely revolutionized speech recognition, for example.
+
+5. Types of DNNs: Convolutional
+Finally, we have the currently extremely popular convolutional networks. A CNN is technically also a feedforward network, but a pretty complex one, able to handle multidimensional data. And while a recurrent network recognizes patterns in time, a CNN learns to recognize patterns across space. They are primarily used for images, but also for texts. This list is not exhaustive and for a more detailed overview of different topologies, please refer to the resources listed at the end of the course.
+
+6. Layers and layers
+In the previous lesson we already saw the most fundamental layer, called the "Dense layer" or "fully connected layer", but there are many more types with different functions and properties. For example, Convolutional layers can operate with multi-dimensional data and help us extract important image features irrespective of their position, which is not possible with classical Dense layers. Dropout layers, on the other hand, have a regularization function, preventing overfitting by randomly turning off a fraction of the nodes from the preceding layer. Another way to fight overfitting is sub-sampling, also called "pooling", where we basically reduce the dimensionality of the data by aggregation – very similar to reducing the resolution of a picture. Finally, we sometimes just want to operate simple signal wrangling operations, like flattening it from a higher-dimensional to single-dimensional space, which we usually do right before calculating the final output of the network.
+
+7. Your first Deep Learning model
+Let's see how simple it is to build a Deep Learning model with Tensorflow and Keras. We import the Sequential model and the layers we want to use. We initialize the model and proceed to stack the layers, like pancakes. We specify the fitting hyperparameters, compile, and our model is ready to start learning from our data. Here you can clearly see that coding is not the hard part of AI. The skills lies in having the right knowledge and experience to configure and tune the model to best fit your data and business problem.
